@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.min.css"/>
+
+        <style>
+        *{ box-sizing: border-box;}
+#mygrid { 
+    margin: auto;
+    max-width: 1500px;
+    display: grid;
+    grid-template-columns: 170px 1fr auto;
+    grid-template-rows: 120px auto auto auto;
+}
+body {
+    background-image: url(backGround.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header { 
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    margin-top: 10px;
+    letter-spacing: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-image: linear-gradient(to right, white , rgb(71, 71, 71));
+    color: rgb(223, 60, 60);
+}
+nav { 
+    grid-row: 2 / 3;
+    grid-column: 1 / 2; 
+    background-color: rgb(223, 60, 60);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-top: 30px;
+}
+main { 
+    grid-row: 2 / 3;
+    grid-column: 2 / 3; 
+    padding-left: 50px;
+    padding-right: 30px;
+    max-width: 1fr;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+aside {
+    grid-row: 2 / 3;
+    grid-column: 3 / 4; 
+    background-color: rgb(223, 60, 60);;
+}
+footer { 
+    grid-row: 3 / 4;
+    grid-column: 1 / 4; 
+    text-align: center;
+    background-color: rgb(71, 71, 71);
+    color: rgb(223, 60, 60);
+    padding: 10px;
+}
+header img {
+    width: 110px;
+    float: left;
+}
+aside p {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(71, 71, 71);
+    font-weight: bold;
+}
+aside a {
+    text-decoration: none;
+    color: rgb(71, 71, 71);
+}
+aside a:hover {
+    text-decoration: underline;
+    color: white;
+    font-size: 17px;
+}
+aside img {
+    margin: 50px 30px;
+}
+nav ul {
+    list-style-type: none;
+    position: fixed;
+    min-width: 100px;
+    padding-left: 10px;
+}
+nav li {
+    padding-bottom: 15px;
+}
+nav a {
+    text-decoration: none;
+    color: rgb(71, 71, 71);
+    background-color: #ff8383;
+    display: block;
+    padding: 15px;
+}
+nav a:hover {
+    text-decoration: underline;
+    background-color: rgb(255, 213, 213);
+}
+h1 {
+    margin-left: 200px;
+}
+h2 {
+    background-image: linear-gradient(to right, white , rgb(71, 71, 71));
+    color: rgb(223, 60, 60);
+    padding: 5px;
+}
+.dropbtn {
+  border: none;
+  min-width: 185px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdown-content {display: block; position: relative;}
+#TMap {
+    background-image: url(map.png);
+    height: 500px;
+    background-size: cover;
+}
+main img {
+    width: 50px;
+    position: absolute;
+}
+#house1 {
+    margin-left: 100px;
+    margin-top: 200px;
+}
+#house2 {
+    margin-left: 100px;
+    margin-top: 400px;
+}
+#house3 {
+    margin-left: 200px;
+    margin-top: 150px;
+}
+main img:hover {
+    width: 55px;
+}
+#PicH {
+    width: 900px;
+    padding: 20px;
+    position: relative;
+}
+.row {
+    margin-left:-5px;
+    margin-right:-5px;
+}
+    
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+  
+th, td {
+    padding: 16px;
+    text-align: left;
+}
+  
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+#available1 {
+    position: absolute;
+    width: 250px;
+    margin-top: 20px;
+}
+#AP {
+    float: right;
+    margin-left: 270px;
+    margin-top: 50px;
+}
+#available2 {
+    position: absolute;
+    width: 250px;
+    margin-top: 230px;
+}
+#available3 {
+    position: absolute;
+    width: 250px;
+    margin-top: 440px;
+}
+form {
+    padding-top: 30px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+label {
+    font-weight: bold;
+}
+input[type=submit], input[type=reset] {
+    width: 40%;
+    background-color: #ff8383;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover, input[type=reset]:hover {
+    background-color: rgb(255, 213, 213);
+    color: rgb(71, 71, 71);
+}
+#inline input {
+    width: 30%;
+}
+#siteMapP {
+    width: 100%;
+    position: relative;
+}
+#table table {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 20px;
+}
+#table td, th {
+    padding: 10px;
+    text-align: left;
+}
+#table th {
+    color: rgb(48, 48, 48);
+    background-color: #9b5a5a;
+}
+#table tr:nth-of-type(odd) {
+    background-color: #b6b6b6;
+}
+#table tr:nth-of-type(even) {
+    background-color: #f8f8f8;
+}
+#sitemapTable {
+    border: none;
+}
+    </style>
+</head>
+<body>

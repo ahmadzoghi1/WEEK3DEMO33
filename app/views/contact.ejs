@@ -1,0 +1,189 @@
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
+   
+<style>
+  * {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  background: white;
+  height: 100vh;
+  display: flex;
+  /* align-items: center; */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.block {
+  flex: 1;
+  margin: 50px 25px;
+}
+
+.block.info {
+  color: black;
+}
+.block.info h2 {
+  margin: 0 0 10px 0;
+}
+.block.info p {
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+.social a {
+  color: #232F31;
+  font-size: 36px;
+  text-decoration: none;
+  opacity: 0.9;
+}
+.social a:hover {
+  opacity: 1;
+}
+
+.block.form {
+  color: black;
+}
+.block.form .label {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.block.form input[type=text], .block.form textarea {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  background: #495558;
+  border: none;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  text-indent: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+.block.form input[type=text]:focus, .block.form textarea:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3);
+}
+.block.form textarea {
+  padding-top: 5px;
+  height: 120px;
+}
+.block.form input[type=submit] {
+  font-size: 16px;
+  margin-top: 10px;
+  background: #232F31;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 5px 12px;
+  border-radius: 3px;
+  font-weight: lighter;
+  opacity: 0.9;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+.block.form input[type=submit]:focus {
+  outline: none;
+  opacity: 1;
+}
+.block.form input[type=submit]:hover {
+  opacity: 1;
+}
+.block.form .button{
+  font-size: 16px;
+  margin-top: 10px;
+  background: #232F31;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 5px 12px;
+  border-radius: 3px;
+  font-weight: lighter;
+  opacity: 0.9;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 920px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .block:nth-child(1) {
+    margin-bottom: 0;
+  }
+}
+</style>
+<main style="margin-top: 20px;">
+  <h2>Contact Me</h2>
+  <!-- font awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<!-- google font -->
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<!-- ////////////////////////////////////////////////////////////// -->
+
+<div id="contact" class="wrapper">
+  <div class="container">
+    <div class="block info">
+    
+      <p class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam molestias voluptatibus enim deserunt quo nisi, mollitia repudiandae, tempore, eos adipisci rem possimus molestiae. Odio sunt quod dolor optio quibusdam dolores?</p>
+      <div class="social">
+        <a href="#">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-weixin"></i>
+        </a>
+      </div>
+  </div>
+  
+  
+  <div class="block form">
+    <div class="form-group">
+      <div class="label">Name</div>
+      <input type="text" id="name" name="name" placeholder="Your name..">
+    </div>
+    <div class="form-group">
+      <div class="label">Email</div>
+      <input type="text" id="email" name="email" placeholder="Your email..">
+    </div>
+    <div class="form-group">
+      <div class="label">Message</div>
+      <textarea name="message" id="message" placeholder="Please leave me a message"></textarea>
+    </div>
+    <div class="form-group">
+      <a href="/" class="button">Submit</a>
+    </div>
+  </div>
+  </div>
+</div>
+  
+</main>
+    <aside>
+      <img src="img/AgentPic.jpg" height="25%">
+      <p>Phone: (647) 613 4234</p>
+      <p>E-mail: <a href="mailto:afarkhon@my.centennialcollege.ca">afarkhon@my.centennialcollege.ca</a></p>
+    </aside>
+    <!--bottom nav-->
+    
+   
+   
+      <!--script section-->
+      <%- include ('partials/bottom_nav.ejs') %>
+      <%- include ('partials/footer.ejs') %>
+   
